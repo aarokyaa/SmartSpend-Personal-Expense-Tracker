@@ -1,0 +1,1 @@
+import repository.*; import service.*; public class BudgetTest{public static void main(String[]a){BudgetService s=new BudgetService(new BudgetRepository());s.setBudget("TestingBudget",1000);assert s.getBudgets().stream().anyMatch(x->x.getCategory().equals("TestingBudget"));System.out.println("BudgetTest PASSED");}}
